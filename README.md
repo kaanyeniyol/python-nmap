@@ -1,9 +1,9 @@
 # python-nmap
 
-IP taramak istiyorsaniz   1:__
-aginiza bagli ipler icin  2:__
-ms17-010 taramasi icin    3:__
-Zaafiyet taramasi icin    4:__
+IP taramak istiyorsaniz   1:<br />
+aginiza bagli ipler icin  2:
+ms17-010 taramasi icin    3:
+Zaafiyet taramasi icin    4:
 
 
 >>   ip adresinizi giriniz  : 192.168.100.166
