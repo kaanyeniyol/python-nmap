@@ -1,8 +1,9 @@
+# -*- coding: utf-8 -*-
 from subprocess import *
 import subprocess , os, sys
 
 
-basla = str(raw_input("IP taramak istiyorsaniz 1 e veya aginiza bagli ipler icin 2 basiniz : "))
+basla = str(raw_input("IP taramak istiyorsaniz   1:  \naginiza bagli ipler icin  2:   \nms17-010 taramasi icin    3:    \nZaafiyet taramasi icin    4:  \n ->> " ))
 if basla=="1":
     ip = "192.168.100.166"
     #os.system("ping "+ip)
@@ -25,7 +26,18 @@ if basla=="1":
 elif basla=="2":
     print("\n")
     ip_adres = str(raw_input(">>   ip adresinizi giriniz /24  : "))
+    print("\n")
     os.system("nmap -sn "+ip_adres)
+elif basla=="3":
+    print("\n")
+    ip_adres = str(raw_input(">>   ip adresinizi giriniz  : "))
+    print("\n")
+    os.system("nmap -p445 --script smb-vuln-ms17-010 "+ip_adres)
+elif basla=="4":
+    print("\n")
+    ip_adres = str(raw_input(">>   ip adresinizi giriniz  : "))
+    print("\n")
+    os.system("nmap -p445 --script vuln "+ip_adres)
 else:
     print("Gecersiz giris")
     sys.exit()
