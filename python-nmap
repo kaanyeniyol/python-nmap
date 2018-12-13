@@ -37,7 +37,7 @@ elif basla=="4":
     print("\n")
     ip_adres = str(raw_input(">>   ip adresinizi giriniz  : "))
     print("\n")
-    os.system("nmap -p445 --script vuln "+ip_adres)
+    os.system("nmap --script vuln "+ip_adres)
 else:
     print("Gecersiz giris")
     sys.exit()
